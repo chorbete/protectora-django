@@ -1,0 +1,16 @@
+<head>
+	<title> Editar Animal </title>	
+</head>
+	<body>
+	<h1> Editar Animal </h1>
+	
+	<form id='form' method='POST' action=''>{% csrf_token %}
+		
+		{{form.as_p}}
+		<input type="submit" value="Editar"/>
+	</form>
+<br/>
+<br/>
+<a href ="/protectora/"> > Inicio</a>
+</body>
+

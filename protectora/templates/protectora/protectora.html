@@ -1,0 +1,15 @@
+Protectoras registradas<br/>
+<hr/>
+<br/>
+{% if object_list %}
+ <ul>
+ {% for protectora in object_list %}
+ <li><a href="/protectora/detProt/{{ protectora.id }}/">{{ protectora.nombre }}</a></li>
+ {% endfor %}
+ </ul>
+{% else %}
+ <p>No hay ninguna protectora</p>
+{% endif %}
+<br/>
+<br/>
+<a href ="/protectora/"> > Inicio</a>

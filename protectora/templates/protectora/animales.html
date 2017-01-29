@@ -1,0 +1,15 @@
+Animales Registrados<br/>
+<hr/>
+<br/>
+{% if ultimos_animales %}
+ <ul>
+ {% for animales in ultimos_animales %}
+ <li><a href="/protectora/detalles/{{ animales.id }}/">{{ animales.nombre }}</a></li>
+ {% endfor %}
+ </ul>
+{% else %}
+ <p>No hay ningún animal registrado</p>
+{% endif %}
+<br/>
+<br/>
+<a href ="/protectora/"> > Inicio</a>

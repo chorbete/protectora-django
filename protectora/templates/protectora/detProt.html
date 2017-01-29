@@ -1,0 +1,31 @@
+
+<head>
+	<title> Un poco mas de información de las protectoras</title>
+
+	<h1> Conociendo a {{ object.nombre }}</h1>		
+</head>
+
+<body>
+	Detalle de la protectora
+	<ul>
+		<li> Su nombre es: {{object.nombre}} </li>
+		<li> Se encuentra en: {{object.ubicacion}} </li>
+		<li> Un poco sobre ellos: {{object.descripcion}} </li>
+		<li> Para contactar, su email es: {{object.email}} </li>
+	</ul>
+
+<a href ="/protectora/editarProt/{{ object.id }}/"> > Editar</a>
+<br/>
+<a href ="/protectora/borrarProt/{{ object.id }}/"> > Borrar</a>
+<br/>		
+<form>
+Ponte en contacto con la protectora {{object.nombre}}
+<input type='submit' value='Contacto'/>
+</form>	
+<br/>
+<br/>
+<a href ="/protectora/"> > Inicio</a>
+</body>
+
+
+

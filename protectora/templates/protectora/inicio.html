@@ -1,0 +1,35 @@
+<head>
+	<title> Bienvenido a protectora </title>
+	<h1> Inicio </h1>
+	{% block content %}
+
+	{% endblock %}
+	{% if  user.is_authenticated %}
+		<h3> Bienvenido {{user.username}} </h3>
+	{% endif %}
+	{% if not user.is_authenticated %}
+		<a href="/usuario/ingreso">Entrar</a>
+		</br>
+		<h>¿Aún no estas registrado?</h>
+		<a href="/usuario/registro">Registrarse</a>
+	{% endif %}
+	 
+	{% if user.is_authenticated %}
+	   	<a href="/usuario/cerrarsesion">Salir</a>
+	{% endif %}
+
+	<h3>Animales</h3>
+		<a href ="/protectora/agregar/"> <li>Añadir animales</li></a>
+		<a href ="/protectora/animales/"> <li>Ver Animales</li></a>
+
+
+	<h3>Protectoras</h3>
+		<a href ="/protectora/anadirProt/"> <li>Añadir protectora</li></a>
+		<a href ="/protectora/protectoras/"> <li>Ver Protectoras</li></a>
+
+	</ul>
+</head>
+
+<body>
+
+</body>

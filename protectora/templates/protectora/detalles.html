@@ -1,0 +1,32 @@
+
+<head>
+	<title> Conoce a nuestros animales</title>
+	<h1> Conociendo a {{detalles.nombre}}</h1>		
+</head>
+
+<body>
+	Detalle del animal. Es un {{detalles.tipo}}
+	<ul>
+		<li> Su nombre es: {{detalles.nombre}} </li>
+		<li> Su raza es: {{detalles.raza}} </li>
+		<li> Su color es: {{detalles.color}} </li>
+		<li> Su edad: {{detalles.edad}} </li>
+		<li> Algo sobre el: {{detalles.descripcion}} </li>
+		<li> Es gestionado por la protectora: {{detalles.protectora}} </li>
+	</ul>
+
+<a href ="/protectora/editar/{{ detalles.id }}/"> > Editar</a>
+<br/>
+<a href ="/protectora/borrarAnimal/{{ detalles.id }}/"> > Borrar</a>
+<br/>	
+¿Estas interesado en {{detalles.nombre}}? 
+<form>
+Ponte en contacto con la protectora {{detalles.protectora}}
+<input type='submit' value='Contacto'/>
+</form>
+<br/>
+<br/>
+<a href ="/protectora/"> > Inicio</a>	
+</body>
+
+

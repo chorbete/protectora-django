@@ -1,0 +1,337 @@
+{% extends "base.html" %}
+  {% block Titulo %}
+    {{cliente.nombre_Usuario}}
+  {% endblock %}
+  {% block Contenido %}
+    <div class="col-md-6">
+      <div class="panel">
+          <div class="panel-body" >
+            <p>DATOS PERSONALES</p>
+          </div>
+          <div class="panel-footer"style="height: 700px;background: url(/media/imagenes/campo.png) no-repeat; /* color: black; */;background-repeat: no-repeat; background-size: 100% 100%;" >
+            <div class="portero" style="margin-top:20px;">
+              <div class="row">
+                <div class="col-md-4 col-sm-4 col-xs-4" style=""></div>
+                <div class="col-md-4 col-sm-4 col-xs-4" style="">
+                  <div class="panel">
+                    <div class="panel-body">
+                      {% if jugador.portero.id is not NONE %}
+                        <a href="{% url 'Gestion_App:jugador' jugador_id=jugador.portero.id %}">{{jugador.portero}}</a>
+                      {% else %}
+                        <a href="#">{{jugador.portero}}</a>
+                      {% endif %}
+                    </div>
+                    <div class="panel-footer">
+                      <p>Puntos: {{jugador.portero.puntos_Jugador}}</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-4" style=""></div>
+              </div>
+            </div>
+            <div class="defensas" style="margin-top:20px;">
+              <div class="row">
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                  <div class="panel">
+                    <div class="panel-body">
+                      {% if jugador.defensa1.id is not NONE %}
+                        <a href="{% url 'Gestion_App:jugador' jugador_id=jugador.defensa1.id %}">{{jugador.defensa1}}</a>
+                      {% else %}
+                        <a href="#">{{jugador.defensa1}}</a>
+                      {% endif %}
+
+                    </div>
+                    <div class="panel-footer">
+                      <p>Puntos:{{jugador.defensa1.puntos_Jugador}}</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                  <div class="panel">
+                    <div class="panel-body">
+                      {% if jugador.defensa2.id is not NONE %}
+                        <a href="{% url 'Gestion_App:jugador' jugador_id=jugador.defensa2.id %}">{{jugador.defensa2}}</a>
+                      {% else %}
+                        <a href="#">{{jugador.defensa2}}</a>
+                      {% endif %}
+
+                    </div>
+                    <div class="panel-footer">
+                      <p>Puntos:{{jugador.defensa2.puntos_Jugador}}</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                  <div class="panel">
+                    <div class="panel-body">
+                      {% if jugador.defensa3.id is not NONE %}
+                        <a href="{% url 'Gestion_App:jugador' jugador_id=jugador.defensa3.id %}">{{jugador.defensa3}}</a>
+                      {% else %}
+                        <a href="#">{{jugador.defensa3}}</a>
+                      {% endif %}
+
+                    </div>
+                    <div class="panel-footer">
+                      <p>Puntos:{{jugador.defensa3.puntos_Jugador}}</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                  <div class="panel">
+                    <div class="panel-body">
+                      {% if jugador.defensa4.id is not NONE %}
+                        <a href="{% url 'Gestion_App:jugador' jugador_id=jugador.defensa4.id %}">{{jugador.defensa4}}</a>
+                      {% else %}
+                        <a href="#">{{jugador.defensa4}}</a>
+                      {% endif %}
+
+                    </div>
+                    <div class="panel-footer">
+                      <p>Puntos:{{jugador.defensa4.puntos_Jugador}}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="medios" style="margin-top:20px;">
+              <div class="row">
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                  <div class="panel">
+                    <div class="panel-body">
+                      {% if jugador.medio1.id is not NONE %}
+                        <a href="{% url 'Gestion_App:jugador' jugador_id=jugador.medio1.id %}">{{jugador.medio1}}</a>
+                      {% else %}
+                        <a href="#">{{jugador.medio1}}</a>
+                      {% endif %}
+
+                    </div>
+                    <div class="panel-footer">
+                      <p>Puntos: {{jugador.medio1.puntos_Jugador}}</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                  <div class="panel">
+                    <div class="panel-body">
+                      {% if jugador.medio2.id is not NONE %}
+                        <a href="{% url 'Gestion_App:jugador' jugador_id=jugador.medio2.id %}">{{jugador.medio2}}</a>
+                      {% else %}
+                        <a href="#">{{jugador.medio2}}</a>
+                      {% endif %}
+
+                    </div>
+                    <div class="panel-footer">
+                      <p>Puntos: {{jugador.medio2.puntos_Jugador}}</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                  <div class="panel">
+                    <div class="panel-body">
+                      {% if jugador.medio3.id is not NONE %}
+                        <a href="{% url 'Gestion_App:jugador' jugador_id=jugador.medio3.id %}">{{jugador.medio3}}</a>
+                      {% else %}
+                        <a href="#">{{jugador.medio3}}</a>
+                      {% endif %}
+
+                    </div>
+                    <div class="panel-footer">
+                      <p>Puntos: {{jugador.medio3.puntos_Jugador}}</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                  <div class="panel">
+                    <div class="panel-body">
+                      {% if jugador.medio4.id is not NONE %}
+                        <a href="{% url 'Gestion_App:jugador' jugador_id=jugador.medio4.id %}">{{jugador.medio4}}</a>
+                      {% else %}
+                        <a href="#">{{jugador.medio4}}</a>
+                      {% endif %}
+
+                    </div>
+                    <div class="panel-footer">
+                      <p>Puntos: {{jugador.medio4.puntos_Jugador}}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="delanteros" style="margin-top:20px;">
+              <div class="row">
+                <div class="col-md-2 col-sm-2 col-xs-2" style=""></div>
+                <div class="col-md-4 col-sm-4 col-xs-4" style="">
+                  <div class="panel">
+                    <div class="panel-body">
+                      {% if jugador.delantero1.id is not NONE %}
+                        <a href="{% url 'Gestion_App:jugador' jugador_id=jugador.delantero1.id %}">{{jugador.delantero1}}</a>
+                      {% else %}
+                        <a href="#">{{jugador.delantero1}}</a>
+                      {% endif %}
+
+                    </div>
+                    <div class="panel-footer">
+                      <p>Puntos: {{jugador.delantero1.puntos_Jugador}}</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-4" style="">
+                  <div class="panel">
+                    <div class="panel-body">
+                      {% if jugador.delantero2.id is not NONE %}
+                        <a href="{% url 'Gestion_App:jugador' jugador_id=jugador.delantero2.id %}">{{jugador.delantero2}}</a>
+                      {% else %}
+                        <a href="#">{{jugador.delantero2}}</a>
+                      {% endif %}
+
+                    </div>
+                    <div class="panel-footer">
+                      <p>Puntos: {{jugador.delantero2.puntos_Jugador}}</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-2" style=""></div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="panel">
+        <div class="panel-body" >
+          <p>REDES SOCIALES</p>
+        </div>
+        <div class="panel-footer" >
+          <table class="table">
+              <thead>
+                  <tr>
+                    <th>Nombre</th>
+                    <th>Usuario</th>
+                    <th>Link</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <th scope="row">Facebook</th>
+                      {% if jugador.portero.id is not NONE %}
+                      <td><a href="{% url 'Gestion_App:jugador' jugador_id=jugador.portero.id %}">{{jugador.portero.nombre_Jugador}}</a></td>
+                      <td>{{jugador.portero.puntos_Jugador}}</td>
+                      {% else %}
+                      <td><a href="#">{{jugador.portero.nombre_Jugador}}</a></td>
+                      <td>{{jugador.portero.puntos_Jugador}}</td>
+                      {% endif %}
+                  </tr>
+                  <tr>
+                      <th scope="row">Instagram</th>
+                      {% if jugador.defensa1.id is not NONE %}
+                      <td><a href="{% url 'Gestion_App:jugador' jugador_id=jugador.defensa1.id %}">{{jugador.defensa1.nombre_Jugador}}</a></td>
+                      <td>{{jugador.defensa1.puntos_Jugador}}</td>
+                      {% else %}
+                      <td><a href="#">{{jugador.defensa1.nombre_Jugador}}</a></td>
+                      <td>{{jugador.defensa1.puntos_Jugador}}</td>
+                      {% endif %}
+                  </tr>
+                  <tr>
+                      <th scope="row">Twitter</th>
+                      {% if jugador.defensa2.id is not NONE %}
+                      <td><a href="{% url 'Gestion_App:jugador' jugador_id=jugador.defensa2.id %}">{{jugador.defensa2.nombre_Jugador}}</a></td>
+                      <td>{{jugador.defensa2.puntos_Jugador}}</td>
+                      {% else %}
+                      <td><a href="#">{{jugador.defensa2.nombre_Jugador}}</a></td>
+                      <td>{{jugador.defensa2.puntos_Jugador}}</td>
+                      {% endif %}
+                  </tr>
+                  <tr>
+                      <th scope="row">4</th>
+                      {% if jugador.defensa3.id is not NONE %}
+                      <td><a href="{% url 'Gestion_App:jugador' jugador_id=jugador.defensa3.id %}">{{jugador.defensa3.nombre_Jugador}}</a></td>
+                      <td>{{jugador.defensa3.puntos_Jugador}}</td>
+                      {% else %}
+                      <td><a href="#">{{jugador.defensa3.nombre_Jugador}}</a></td>
+                      <td>{{jugador.defensa3.puntos_Jugador}}</td>
+                      {% endif %}
+                  </tr>
+                  <tr>
+                      <th scope="row">5</th>
+                      {% if jugador.defensa4.id is not NONE %}
+                      <td><a href="{% url 'Gestion_App:jugador' jugador_id=jugador.defensa4.id %}">{{jugador.defensa4.nombre_Jugador}}</a></td>
+                      <td>{{jugador.defensa4.puntos_Jugador}}</td>
+                      {% else %}
+                      <td><a href="#">{{jugador.defensa4.nombre_Jugador}}</a></td>
+                      <td>{{jugador.defensa4.puntos_Jugador}}</td>
+                      {% endif %}
+                  </tr>
+                  <tr>
+                      <th scope="row">6</th>
+                      {% if jugador.medio1.id is not NONE %}
+                      <td><a href="{% url 'Gestion_App:jugador' jugador_id=jugador.medio1.id %}">{{jugador.medio1.nombre_Jugador}}</a></td>
+                      <td>{{jugador.medio1.puntos_Jugador}}</td>
+                      {% else %}
+                      <td><a href="#">{{jugador.medio1.nombre_Jugador}}</a></td>
+                      <td>{{jugador.medio1.puntos_Jugador}}</td>
+                      {% endif %}
+                  </tr>
+                  <tr>
+                      <th scope="row">7</th>
+                      {% if jugador.medio2.id is not NONE %}
+                      <td><a href="{% url 'Gestion_App:jugador' jugador_id=jugador.medio2.id %}">{{jugador.medio2.nombre_Jugador}}</a></td>
+                      <td>{{jugador.medio2.puntos_Jugador}}</td>
+                      {% else %}
+                      <td><a href="#">{{jugador.medio2.nombre_Jugador}}</a></td>
+                      <td>{{jugador.medio2.puntos_Jugador}}</td>
+                      {% endif %}
+                  </tr>
+                  <tr>
+                      <th scope="row">8</th>
+                      {% if jugador.medio3.id is not NONE %}
+                      <td><a href="{% url 'Gestion_App:jugador' jugador_id=jugador.medio3.id %}">{{jugador.medio3.nombre_Jugador}}</a></td>
+                      <td>{{jugador.medio3.puntos_Jugador}}</td>
+                      {% else %}
+                      <td><a href="#">{{jugador.medio3.nombre_Jugador}}</a></td>
+                      <td>{{jugador.medio3.puntos_Jugador}}</td>
+                      {% endif %}
+                  </tr>
+                  <tr>
+                      <th scope="row">9</th>
+                      {% if jugador.medio4.id is not NONE %}
+                      <td><a href="{% url 'Gestion_App:jugador' jugador_id=jugador.medio4.id %}">{{jugador.medio4.nombre_Jugador}}</a></td>
+                      <td>{{jugador.medio4.puntos_Jugador}}</td>
+                      {% else %}
+                      <td><a href="#">{{jugador.medio4.nombre_Jugador}}</a></td>
+                      <td>{{jugador.medio4.puntos_Jugador}}</td>
+                      {% endif %}
+                  </tr>
+                  <tr>
+                      <th scope="row">10</th>
+                      {% if jugador.delantero1.id is not NONE %}
+                      <td><a href="{% url 'Gestion_App:jugador' jugador_id=jugador.delantero1.id %}">{{jugador.delantero1.nombre_Jugador}}</a></td>
+                      <td>{{jugador.delantero1.puntos_Jugador}}</td>
+                      {% else %}
+                      <td><a href="#">{{jugador.delantero1.nombre_Jugador}}</a></td>
+                      <td>{{jugador.delantero1.puntos_Jugador}}</td>
+                      {% endif %}
+                  </tr>
+                  <tr>
+                      <th scope="row">11</th>
+                      {% if jugador.delantero2.id is not NONE %}
+                      <td><a href="{% url 'Gestion_App:jugador' jugador_id=jugador.delantero2.id %}">{{jugador.delantero2.nombre_Jugador}}</a></td>
+                      <td>{{jugador.delantero2.puntos_Jugador}}</td>
+                      {% else %}
+                      <td><a href="#">{{jugador.delantero2.nombre_Jugador}}</a></td>
+                      <td>{{jugador.delantero2.puntos_Jugador}}</td>
+                      {% endif %}
+                  </tr>
+              </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    {% if user.is_authenticated %}
+      {% if id_jugador == usuario%}
+      <div class="col-md-12" style="margin-top:30px">
+        <a class="btn btn-primary" href="{% url 'Usuario:modificar' usuario_id=jugador.id %}">Modificar Equipo </a>
+      </div>
+      {% endif %}
+    {% endif %}
+  {% endblock %}
+  {{equipos.escudo_Equipo.url}}"
